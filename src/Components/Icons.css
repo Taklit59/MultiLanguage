@@ -1,0 +1,11 @@
+.icons li{
+    list-style-type: none;
+    padding: 5px;
+    cursor: pointer;
+    }
+    .icons{
+        padding-top: 50px;
+    }
+    img {
+        width: 50px;
+    }
