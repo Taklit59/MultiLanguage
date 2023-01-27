@@ -1,11 +1,27 @@
-.icons li{
-    list-style-type: none;
-    padding: 5px;
-    cursor: pointer;
+    @media screen and (min-width: 390px) {
+    .icons li{
+        list-style-type: none;
+        padding: 2px;
+        cursor: pointer;
+        }
+        .icons{
+            padding-top: 40px;
+        }
+        img {
+            width: 45px;
+        }
     }
-    .icons{
-        padding-top: 50px;
+    @media screen and (max-width: 390px){
+    div.icons ul {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 80px;
+        padding: 0;
     }
     img {
-        width: 50px;
+        margin: 0%;
+        padding: 0 20px;
+        width: 45px;
+    }
     }

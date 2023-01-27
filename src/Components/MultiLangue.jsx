@@ -1,15 +1,17 @@
-import React from 'react';
-import './DataLangue';
+import {React, useContext} from 'react';
+import { langueContaint } from './DataLangue';
 import './MultiLangue.css';
+import {monContexte} from '../Context/LangueContext'
 
-function multiLangue() {
+function MultiLangue() {
+  const {choiceLangue} = useContext(monContexte)
 
   return (
       <div className='titreSubtitle'>
-      <h1>Bonjour et bienvenue sur le site.</h1>
-      <p>Découvrez nos fonctionnalités et nos services !</p>
+        <h1>{langueContaint[choiceLangue].title}</h1>
+        <p>{langueContaint[choiceLangue].subtitle}</p>
       </div>
   )
 }
 
-export default multiLangue
+export default MultiLangue

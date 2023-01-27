@@ -1,18 +1,20 @@
-import React from 'react';
-import { useContext } from 'react';
+import React, {useContext} from 'react';
+import { monContexte } from '../Context/LangueContext';
 import { langueContaint } from './DataLangue';
 import './Icons.css'
 
-function Icons() {
+
+export default function Icons() {
+
+  const {modifyLanguage} = useContext(monContexte);
+
   return (
     <div className='icons'>
       <ul>
-        <li><img src={langueContaint[0].image} alt=""/></li>
-        <li><img src={langueContaint[1].image} alt=""/></li>
-        <li><img src={langueContaint[2].image} alt=""/></li>
+        <li ><img onClick={() => (modifyLanguage("FR"))} src={langueContaint["FR"].image} alt=""/></li>
+        <li ><img onClick={() => (modifyLanguage("EN"))} src={langueContaint["EN"].image} alt=""/></li>
+        <li ><img onClick={() => (modifyLanguage("ES"))} src={langueContaint["ES"].image} alt=""/></li>
     </ul>
     </div>
   )
-}
-
-export default Icons
+};
